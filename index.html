@@ -1,57 +1,73 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公共表示用カレンダー</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            background: #f5f5f5;
-        }
-
-        h1 {
-            padding: 20px;
-            margin: 0;
-            background: white;
-            font-size: 22px;
-        }
-
-        .info {
-            padding: 15px 20px;
-            background: #fffde7;
-            border-bottom: 1px solid #ddd;
-            color: #444;
-        }
-
-        .calendar {
-            max-width: 1200px;
-            margin: 20px auto;
-            background: white;
-        }
-
-        iframe {
-            width: 100%;
-            height: 800px;
-            border: 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<!-- ページ全体を5分ごとに自動更新 -->
+<meta http-equiv="refresh" content="300">
+<title>公共カレンダー</title>
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #f5f5f5;
+    }
+    h1 {
+        padding: 20px;
+        margin: 0;
+        background: white;
+        font-size: 22px;
+    }
+    .info {
+        padding: 15px 20px;
+        background: #fffde7;
+        border-bottom: 1px solid #ddd;
+        color: #444;
+    }
+    .info p {
+        margin: 8px 0;
+    }
+    .calendar {
+        max-width: 1200px;
+        margin: 20px auto;
+        background: white;
+    }
+    iframe {
+        width: 100%;
+        height: 800px;
+        border: 0;
+    }
+</style>
 </head>
 <body>
 
-<h1>公共表示用カレンダー</h1>
+<h1>公共カレンダー</h1>
 
 <div class="info">
-    <p>🔄 15分ごとに自動更新 ｜ 📅 14日先まで確認可能
-    📞 通話：だいたい8:00〜18:00 ｜ 💬 チャット：だいたい7:00〜21:00</p>
-    <p>※時間帯は目安です。予定に記載がなくても対応できない場合があります。</p>
+    <p>
+        🔄 ページ：5分ごとに自動更新
+        ｜ 📅 カレンダー：約15分ごとに更新
+        ｜ 📅 14日先まで確認可能
+    </p>
+    <p>
+        📞 通話：だいたい8:00〜18:00
+        ｜ 💬 チャット：だいたい7:00〜21:00
+    </p>
+    <p>
+        🟢 連絡可 ✅
+        ｜ 🟡 急用時のみ ⚠️
+        ｜ 🔴 通常連絡不可 ❌
+        ｜ 🟣 連絡不可 📵
+    </p>
+    <p>
+        ※表示は予定の状況をもとにした目安です。
+        時間帯や予定の状況によって対応できない場合があります。
+    </p>
 </div>
 
 <div class="calendar">
     <iframe
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FTokyo&showPrint=0&mode=WEEK&src=MzQ4Y2VjOTM5ZDBhMGQ4NTZmOTQ2N2I2OTUwNTQ2MGYzODY1OTY5MGNlYWQ3YTQyYzg0YzkxNDY0MDEwOWIzNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23616161&color=%234285f4"
-        title="公共表示用カレンダー">
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FTokyo&mode=WEEK&title&src=MjUzZmVhMTA2NmIxYTc5MTkzMjg5MzhmODVmOWE3MmUyMjYzNDQ2YTk2ZTM0NjljNDY2OTExODUxNGFkMTQzMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23616161"
+        title="公共カレンダー">
     </iframe>
 </div>
 
